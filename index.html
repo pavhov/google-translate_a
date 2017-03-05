@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Translate_a</title>
+    </head>
+    <body>
+        <div>
+            <select name="hl" id="hl">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+            </select>
+            <select name="tl" id="tl">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+            </select>
+            <textarea name="q" id="q"
+                      onblur="translate_a.translate(
+                          document.getElementById('hl').value,
+                          document.getElementById('tl').value,
+                          document.getElementById('q').value
+                      )"
+            ></textarea>
+            <div id="s"></div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="translate_a.js"></script>
+    </body>
+</html>
